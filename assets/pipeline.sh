@@ -5,18 +5,18 @@ if npm run build
 then
 	echo "No build errors, deploying...."
 	echo "Pushing lastest build to github"
-	if [ ! -z "$1" ];
+	if [ ! -z "$1" ] || [ ! -z "$2" ];
 	then
 		git add .
 		git commit -m "$1"
-		git push http://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@github.com/Ryan37342342/COMPX341-A3 
+		git push http://"$2"@github.com/Ryan37342342/COMPX341-A3 
 		echo "git commit message: $1"
 		sleep 4
 		npm run start
 		exit 1
 	else
 		echo "No commit message specified! Stopping...."
-		echo "Pipeline usage like ./pipeline.sh <""commit message"">"
+		echo "Pipeline usage like ./pipeline.sh <""Commit Message""> <""Access Token"">"
 		exit 2
 	fi
 	
