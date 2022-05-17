@@ -9,7 +9,9 @@ then
 	then
 		git add .
 		git commit -m "$1"
+		git push http://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@github.com/Ryan37342342/COMPX341-A3 
 		echo "git commit message: $1"
+		sleep 4
 		npm run start
 		exit 1
 	else
