@@ -9,14 +9,14 @@ then
 	then
 		git add .
 		git commit -m "$1"
-		git push http://@github.com/Ryan37342342/COMPX341-A3 
+		git push http://github.com/Ryan37342342/COMPX341-A3 
 		echo "git commit message: $1"
 		sleep 4
 		npm run start
 		exit 1
 	else
 		echo "No commit message specified! Stopping...."
-		echo "Pipeline usage like ./pipeline.sh <""Commit Message""> <""Access Token"">"
+		echo "Pipeline usage like ./pipeline.sh <""Commit Message"">"
 		exit 2
 	fi
 	
