@@ -14,7 +14,11 @@ interface BestSellersState {
 
 export default class BestSellers extends React.Component<BestSellersProps, BestSellersState> {
   constructor(props: BestSellersProps) {
-    supe
+    super(props);
+
+    this.state = {
+      isLoading: true,
+      books: []
     };
   }
 
@@ -29,7 +33,7 @@ export default class BestSellers extends React.Component<BestSellersProps, BestS
         books.push({ bookId: hit });
       }
       this.setState({
-        books: 
+        books: books,
         isLoading: false
       });
     } catch(error) {
