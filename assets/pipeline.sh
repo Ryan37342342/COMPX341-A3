@@ -9,7 +9,7 @@ then
 	then
 		git add .
 		git commit -m "$1"
-		git push http://"$2"@github.com/Ryan37342342/COMPX341-A3 
+		git push http://$2@github.com/Ryan37342342/COMPX341-A3 
 		echo "git commit message: $1"
 		sleep 4
 		npm run start
