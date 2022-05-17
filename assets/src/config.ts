@@ -1,3 +1,4 @@
+/**Ryan McCarthy 1348104**/
 //
 export default {
   apiGateway: {
